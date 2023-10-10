@@ -1,5 +1,6 @@
 import math
 import sys
+import time
 import os
 import heapq
 import numpy as np
@@ -334,63 +335,67 @@ def map():
     # Build Map
     obstacleX, obstacleY = [], []
 
-    for i in range(51):
-        obstacleX.append(i)
-        obstacleY.append(0)
-
-    for i in range(51):
-        obstacleX.append(0)
-        obstacleY.append(i)
-
-    for i in range(51):
-        obstacleX.append(i)
-        obstacleY.append(50)
-
-    for i in range(51):
-        obstacleX.append(50)
-        obstacleY.append(i)
-    
-    for i in range(10,20):
-        obstacleX.append(i)
-        obstacleY.append(30) 
-
-    for i in range(30,51):
-        obstacleX.append(i)
-        obstacleY.append(30) 
-
-    for i in range(0,31):
-        obstacleX.append(20)
-        obstacleY.append(i) 
-
-    for i in range(0,31):
-        obstacleX.append(30)
-        obstacleY.append(i) 
-
-    for i in range(40,50):
-        obstacleX.append(15)
-        obstacleY.append(i)
-
-    for i in range(25,40):
-        obstacleX.append(i)
-        obstacleY.append(35)
-
-
-#-------------------
     # for i in range(51):
     #     obstacleX.append(i)
-    #     obstacleY.append(30)
+    #     obstacleY.append(0)
 
-    # for i in range(22):
+    # for i in range(51):
+    #     obstacleX.append(0)
+    #     obstacleY.append(i)
+
+    # for i in range(51):
     #     obstacleX.append(i)
-    #     obstacleY.append(20)
+    #     obstacleY.append(50)
+
+    # for i in range(51):
+    #     obstacleX.append(50)
+    #     obstacleY.append(i)
+    
+    # for i in range(10,20):
+    #     obstacleX.append(i)
+    #     obstacleY.append(30) 
 
     # for i in range(30,51):
     #     obstacleX.append(i)
-    #     obstacleY.append(20)
+    #     obstacleY.append(30) 
 
-    # for i in range(0,21):
-    #     obstacleX.append(21)
+    # for i in range(0,31):
+    #     obstacleX.append(20)
+    #     obstacleY.append(i) 
+
+    # for i in range(0,31):
+    #     obstacleX.append(30)
+    #     obstacleY.append(i) 
+
+    # for i in range(40,50):
+    #     obstacleX.append(15)
     #     obstacleY.append(i)
+
+    # for i in range(25,40):
+    #     obstacleX.append(i)
+    #     obstacleY.append(35)
+
+
+#-------------------
+    for i in range(51):
+        for j in range(29,51):
+            obstacleX.append(i)
+            obstacleY.append(j)
+
+    for i in range(23):
+        for j in range(22):
+            obstacleX.append(i)
+            obstacleY.append(j)
+
+    for i in range(28,51):
+        for j in range(22):
+            obstacleX.append(i)
+            obstacleY.append(j)
+
+    for i in range(20,30):
+        for j in range(10):
+            obstacleX.append(i)
+            obstacleY.append(j)
     
     # for i in range(0,21):
     #     obstacleX.append(30)
@@ -586,10 +591,10 @@ def drawCar(x, y, yaw, color='black'):
 def main():
 
     # Set Start, Goal x, y, theta
-    # s = [25, 25, np.deg2rad(-180)]
-    # g = [25, 15, np.deg2rad(-180)]
-    s = [10, 10, np.deg2rad(-180)]
-    g = [25, 20, np.deg2rad(140)]
+    s = [35, 25, np.deg2rad(-180)]
+    g = [25, 15, np.deg2rad(90)]
+    # s = [10, 10, np.deg2rad(-180)]
+    # g = [25, 20, np.deg2rad(140)]
     # s = [10, 35, np.deg2rad(0)]
     # g = [22, 28, np.deg2rad(0)]
 
@@ -632,7 +637,7 @@ def main():
         drawCar(x[k], y[k], yaw[k])
         plt.arrow(x[k], y[k], 1*math.cos(yaw[k]), 1*math.sin(yaw[k]), width=.1)
         plt.title("Hybrid A*")
-        plt.pause(0.001)
+        plt.pause(0.02)
     
     plt.show()
 

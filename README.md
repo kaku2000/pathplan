@@ -2,19 +2,27 @@
 Motion Planner for a Car based of Kinematic & Reeds-Shepp Node expansions and a combination of Holonomic & Non-Holonomic Cost Function.
 
 ## Dependencies
-1. python3
-2. [CurvesGenerator](https://github.com/zhm-real/CurvesGenerator)
+```
+pip install -r requirements.txt
+```
+ 
+
+<!-- 1. python3
+2. [CurvesGenerator](https://github.com/zhm-real/CurvesGenerator) -->
 
 ## Results
-Path & Footprint           |  Node Simulations & Animation
-:-------------------------:|:-------------------------:
-<img src="/data/simpleGoal/simpleGoal1.png"/> | <img src="/data/simpleGoal/simpleGoal2.png"/>
-<img src="/data/simpleGoal/simpleGoal3.gif"/> | <img src="/data/simpleGoal/simpleGoal4.gif"/>
+<!-- Path & Footprint           |  Node Simulations & Animation
+:-------------------------:|:-------------------------: -->
+Same case: 
+<img src="data/ghe/original.mov"/>
 
-Path & Footprint             |  Node Simulations & Animation
-:-------------------------:|:-------------------------:
-<img src="/data/parking/parking1.png"/> | <img src="/data/parking/parking2.png"/>
-<img src="/data/parking/parking3.gif"/> | <img src="/data/parking/parking4.gif"/>
+Long Distance : 
+<img src="data/ghe/long-distance.mov>
+
+Others : 
+<img src="data/ghe/weird.mov">
+
+<img src="data/ghe/04.mov">
 
 ## Refrences
 1. https://github.com/zhm-real/MotionPlanning
