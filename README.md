@@ -14,15 +14,14 @@ pip install -r requirements.txt
 <!-- Path & Footprint           |  Node Simulations & Animation
 :-------------------------:|:-------------------------: -->
 Same case: 
-<img src="data/ghe/original.mov"/>
+ data/ghe/original.mov
 
 Long Distance : 
-<img src="data/ghe/long-distance.mov>
+ data/ghe/long-distance.mov
 
 Others : 
-<img src="data/ghe/weird.mov">
-
-<img src="data/ghe/04.mov">
+ data/ghe/weird.mov
+ data/ghe/04.mov
 
 ## Refrences
 1. https://github.com/zhm-real/MotionPlanning
