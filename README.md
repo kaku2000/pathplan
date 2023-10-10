@@ -6,6 +6,10 @@ Motion Planner for a Car based of Kinematic & Reeds-Shepp Node expansions and a 
 pip install -r requirements.txt
 ```
  
+## Run
+```
+python scripts/hybridAStar_ghe.py
+```
 
 <!-- 1. python3
 2. [CurvesGenerator](https://github.com/zhm-real/CurvesGenerator) -->
