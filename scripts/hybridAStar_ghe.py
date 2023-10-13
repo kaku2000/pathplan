@@ -18,10 +18,10 @@ class Car:
     width = 3
 
 class Cost:
-    reverse = 10
-    directionChange = 150
-    steerAngle = 1
-    steerAngleChange = 5
+    reverse = 100
+    directionChange = 1500
+    steerAngle = 1000
+    steerAngleChange = 500
     hybridCost = 50
 
 class Node:
@@ -335,6 +335,46 @@ def map():
     # Build Map
     obstacleX, obstacleY = [], []
 
+#--------------------------------- shm scene
+
+    # for i in range(38):  #left up 
+    #     for j in range(30,51):
+    #         obstacleX.append(i)
+    #         obstacleY.append(j)
+
+    # for i in range(44,51):  #left up 
+    #     for j in range(30,51):
+    #         obstacleX.append(i)
+    #         obstacleY.append(j)
+
+    # for i in range(42):
+    #     for j in range(0,22):
+    #         obstacleX.append(i)
+    #         obstacleY.append(j)
+
+    # for i in range(47,51):
+    #     for j in range(0,22):
+    #         obstacleX.append(i)
+    #         obstacleY.append(j)
+
+
+    # for i in range(23):
+    #     for j in range(22):
+    #         obstacleX.append(i)
+    #         obstacleY.append(j)
+
+    # for i in range(28,51):
+    #     for j in range(22):
+    #         obstacleX.append(i)
+    #         obstacleY.append(j)
+
+    # for i in range(20,30):
+    #     for j in range(10):
+    #         obstacleX.append(i)
+    #         obstacleY.append(j)
+
+
+#-------------------------------
     # for i in range(51):
     #     obstacleX.append(i)
     #     obstacleY.append(0)
@@ -376,9 +416,9 @@ def map():
     #     obstacleY.append(35)
 
 
-#-------------------
+#-------------------  original 
     for i in range(51):
-        for j in range(29,51):
+        for j in range(33,51):
             obstacleX.append(i)
             obstacleY.append(j)
 
@@ -396,6 +436,8 @@ def map():
         for j in range(10):
             obstacleX.append(i)
             obstacleY.append(j)
+            
+#----------------------------
     
     # for i in range(0,21):
     #     obstacleX.append(30)
@@ -591,12 +633,13 @@ def drawCar(x, y, yaw, color='black'):
 def main():
 
     # Set Start, Goal x, y, theta
-    s = [35, 25, np.deg2rad(-180)]
-    g = [25, 15, np.deg2rad(90)]
+    # s = [25, 25, np.deg2rad(0)]
+    # g = [44, 15, np.deg2rad(90)]
     # s = [10, 10, np.deg2rad(-180)]
     # g = [25, 20, np.deg2rad(140)]
-    # s = [10, 35, np.deg2rad(0)]
-    # g = [22, 28, np.deg2rad(0)]
+    #original s g
+    s = [45, 25, np.deg2rad(180)]
+    g = [25, 15, np.deg2rad(90)]
 
     # Get Obstacle Map
     obstacleX, obstacleY = map()
